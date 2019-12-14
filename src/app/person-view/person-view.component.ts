@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Person } from '../shared/models/person.model';
 
 @Component({
@@ -7,6 +7,8 @@ import { Person } from '../shared/models/person.model';
   styleUrls: ['./person-view.component.css']
 })
 export class PersonViewComponent implements OnInit {
+
+  @Output('deletePerson') deleteButtonEventEmitter = new EventEmitter();
 
   @Input() inPerson: Person;
 

@@ -2,6 +2,8 @@
     <div class="row">
         <div class="col-4">{{inPerson.id}}</div>
         <div class="col-4">{{inPerson.firstname}}</div>
-        <div class="col-4">{{inPerson.lastname}}</div>
+        <div class="col-3">{{inPerson.lastname}}</div>
+        <div class="col-1 delete-button"
+        (click)="deleteButtonEventEmitter.emit(inPerson)">Удалить</div>
     </div>
 </div>

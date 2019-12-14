@@ -8,6 +8,7 @@ import { Person } from './shared/models/person.model';
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'Компоненты';
+  lastId = 5; //Откуда? Просто помним про 5 первых добавленных человека
   persons: Person[] = [];
 
   constructor() {
@@ -30,8 +31,13 @@ export class AppComponent implements OnInit, OnDestroy {
     this.persons.push(person);
   }
 
-  test(even) {
-    console.log(event);
+  onDeletePerson(personToDelete) {
+    console.log(`do you want to delete?`);
+    console.log(personToDelete);
+    let index = this.persons.findIndex((value, index, obj) => value.id === personToDelete.id);
+
+    console.log(index);
+    if (index !== undefined) { this.persons.splice(index, 1) }
   }
 
 }
