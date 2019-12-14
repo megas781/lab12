@@ -1,7 +1,16 @@
+
+.button:hover {
+  font-weight: bold;
+  /*transform: scale(1.1);*/
+
+}
+
+.edit-button {
+
+}
+
 .delete-button {
   cursor: pointer;
   color: red;
 }
-.delete-button:hover {
-  font-weight: bold;
-}
+

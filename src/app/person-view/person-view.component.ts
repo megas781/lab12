@@ -8,14 +8,14 @@ import { Person } from '../shared/models/person.model';
 })
 export class PersonViewComponent implements OnInit {
 
+  @Output('editPerson') editPersonEventEmitter = new EventEmitter();
   @Output('deletePerson') deleteButtonEventEmitter = new EventEmitter();
-
   @Input() inPerson: Person;
 
   constructor() { }
 
   ngOnInit() {
-    // console.log(this.inPerson)
+
   }
 
 }

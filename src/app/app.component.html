@@ -3,15 +3,20 @@
     <h2>{{title}}</h2>
   </div>
 </div>
-<!-- <app-first></app-first>
-<app-second></app-second> -->
 
-
-<app-person-view [inPerson]="person" *ngFor="let person of persons"
-
-(deletePerson)="onDeletePerson($event)"
+<app-person-view
+  [inPerson]="person" *ngFor="let person of persons"
+  (deletePerson)="onDeletePerson($event)"
+  (editPerson)="onEditPerson($event)"
 >
 
 </app-person-view>
 <hr>
-<app-person-add (addperson)="onAddPerson($event)"></app-person-add>
+
+<app-person-add
+  (addperson)="onAddPerson($event)"
+></app-person-add>
+
+<app-edit-person-modal
+  (onModalSave)="onEditModalSave($event)"
+></app-edit-person-modal>

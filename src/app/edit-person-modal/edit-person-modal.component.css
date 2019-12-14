@@ -1,0 +1,43 @@
+.edit-person-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: opacity 0.2s;
+}
+.edit-person-modal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.edit-person-modal__container {
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*align-items: stretch;*/
+  background-color: white;
+  border-radius: 16px;
+}
+
+.dim {
+  background-color: black;
+  opacity: 0.3;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.save {
+  background-color: green;
+  color: white;
+}
+.cancel {
+  background-color: red;
+  color: white;
+}

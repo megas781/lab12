@@ -6,6 +6,7 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { PersonViewComponent } from './person-view/person-view.component';
 import { PersonAddComponent } from './person-add/person-add.component';
+import { EditPersonModalComponent } from './edit-person-modal/edit-person-modal.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { PersonAddComponent } from './person-add/person-add.component';
     FirstComponent,
     SecondComponent,
     PersonViewComponent,
-    PersonAddComponent
+    PersonAddComponent,
+    EditPersonModalComponent
   ],
   imports: [
     BrowserModule

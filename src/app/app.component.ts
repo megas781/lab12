@@ -1,5 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {Component, OnInit, OnDestroy, ViewChild, ElementRef} from '@angular/core';
 import { Person } from './shared/models/person.model';
+import {EditPersonModalComponent} from "./edit-person-modal/edit-person-modal.component";
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,8 @@ export class AppComponent implements OnInit, OnDestroy {
   title = 'Компоненты';
   lastId = 5; //Откуда? Просто помним про 5 первых добавленных человека
   persons: Person[] = [];
+  //Модальное окно
+  @ViewChild(EditPersonModalComponent, {static: false}) editModal;
 
   constructor() {
   }
@@ -30,6 +33,16 @@ export class AppComponent implements OnInit, OnDestroy {
 
     person.id = newId;
     this.persons.push(person);
+  }
+
+  onEditModalSave(personToSave) {
+    // console.log('must change here!');
+    // console.log(personToSave);
+  }
+
+  onEditPerson(personToEdit) {
+    this.editModal.showSelf(personToEdit);
+    console.log('onEditPerson');
   }
 
   onDeletePerson(personToDelete) {
