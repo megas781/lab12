@@ -1,5 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Person } from '../shared/models/person.model';
+import {Component, OnInit, Output, EventEmitter, ViewChild, ElementRef} from '@angular/core';
+import {Person} from '../shared/models/person.model';
 
 
 @Component({
@@ -11,7 +11,12 @@ export class PersonAddComponent implements OnInit {
 
   @Output() addperson = new EventEmitter<Person>();
 
-  constructor() { }
+  @ViewChild('inputFirstname', {static: false}) firstnameInput: ElementRef;
+  @ViewChild('inputLastname', {static: false}) lastnameInput: ElementRef;
+
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
@@ -21,8 +26,16 @@ export class PersonAddComponent implements OnInit {
   }
 
   onAddPerson(firstname: string, lastname: string) {
-    let person = new Person(firstname, lastname);
-    this.addperson.emit(person);
+    if (firstname != '' && lastname != '') {
+      let person = new Person(firstname, lastname);
+      this.addperson.emit(person);
+
+      this.firstnameInput.nativeElement.value = '';
+      this.lastnameInput.nativeElement.value = '';
+    } else {
+      //Есть пустые поля. Ничего не делаем
+    }
+    // console.log(this.lastnameInput);
   }
 
 }

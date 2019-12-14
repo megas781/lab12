@@ -26,7 +26,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   onAddPerson(person: Person) {
-    let newId = this.persons[this.persons.length - 1].id + 1;
+    let newId = ++this.lastId;
+
     person.id = newId;
     this.persons.push(person);
   }
