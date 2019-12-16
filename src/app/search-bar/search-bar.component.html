@@ -1,0 +1,11 @@
+<div class="row container">
+  <div class="col-1">Поиск:</div>
+  <input
+    type="text"
+    placeholder="Введите имя, фамилию..."
+    class="col-10"
+    [(ngModel)]="searchString"
+    (input)="typeEventEmitter.emit(this.searchString)"
+    >
+<!--  <div class="col-1 button" (click)="searchEventEmitter.emit(this.searchString)">Найти</div>-->
+</div>

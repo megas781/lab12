@@ -4,8 +4,25 @@
   </div>
 </div>
 
+<app-search-bar
+(typeEventEmitter)="onType($event)"
+></app-search-bar>
+
+<!--<div class="row container">-->
+<!--  <div class="col-1">Поиск:</div>-->
+<!--  <input-->
+<!--    type="text"-->
+<!--    placeholder="Введите имя, фамилию..."-->
+<!--    class="col-11"-->
+<!--    [(ngModel)]="searchString"-->
+<!--    (input)="onType(searchString)"-->
+<!--  >-->
+<!--</div>-->
+
+
 <app-person-view
-  [inPerson]="person" *ngFor="let person of persons"
+  [inPerson]="person"
+  *ngFor="let person of persons"
   (deletePerson)="onDeletePerson($event)"
   (editPerson)="onEditPerson($event)"
 >

@@ -7,6 +7,9 @@ import { SecondComponent } from './second/second.component';
 import { PersonViewComponent } from './person-view/person-view.component';
 import { PersonAddComponent } from './person-add/person-add.component';
 import { EditPersonModalComponent } from './edit-person-modal/edit-person-modal.component';
+import { PersonFilterPipe } from './person-filter.pipe';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -15,11 +18,14 @@ import { EditPersonModalComponent } from './edit-person-modal/edit-person-modal.
     SecondComponent,
     PersonViewComponent,
     PersonAddComponent,
-    EditPersonModalComponent
+    EditPersonModalComponent,
+    PersonFilterPipe,
+    SearchBarComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+	imports: [
+		BrowserModule,
+		FormsModule
+	],
   providers: [],
   bootstrap: [AppComponent]
 })
