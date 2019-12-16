@@ -49,22 +49,16 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   onEditPerson(personToEdit) {
-  //   this.editModal.showSelf(personToEdit);
-  //   console.log('onEditPerson');
+    this.editModal.showSelf(personToEdit);
   }
 
   onDeletePerson(personToDelete) {
-  //   console.log(`do you want to delete?`);
-  //   console.log(personToDelete);
-  //   // let index = this._storedPersons.findIndex((value, index, obj) => value.id === personToDelete.id);
-  //
-  //   // console.log(index);
-  //   // if (index !== undefined) { this._storedPersons.splice(index, 1) }
+    this.personService.deleteUser(personToDelete.id);
   }
 
   onType(searchString) {
     this.personService.searchString = searchString;
-    console.log(this.personService.displayedPersons);
+    // console.log(this.personService.displayedPersons);
   }
 
 }
