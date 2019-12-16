@@ -13,7 +13,7 @@ import {PersonService} from "./person.service";
 })
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'Компоненты';
-  lastId = 5; //Откуда? Просто помним про 5 первых добавленных человека
+  lastId: number = null; //Откуда? Просто помним про 5 первых добавленных человека
 
   private searchString: string = '';
   //Модальное окно
@@ -25,11 +25,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
-    console.log('hey!');
-    // let asdf = new Person('asdf','fdsa', 555);
-    // console.log([asdf]);
-    let self = this;
-    this.personService.getUsers();
+
   }
 
   ngAfterViewInit(): void {
@@ -38,14 +34,12 @@ export class AppComponent implements OnInit, AfterViewInit {
 
 
   onAddPerson(person: Person) {
-  //   let newId = ++this.lastId;
-  //   person.id = newId;
-  //   // this._storedPersons.push(person);
-    console.log(this.personService.displayedPersons);
+
+    this.personService.createUser(person);
   }
 
   onEditModalSave(personToSave) {
-
+    this.personService.putUpdatedUser(personToSave)
   }
 
   onEditPerson(personToEdit) {

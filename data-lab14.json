@@ -11,9 +11,9 @@
       "id": 2
     },
     {
-      "firstname": "Milena",
-      "lastname": "Krasnova",
-      "id": 3
+      "id": 3,
+      "firstname": "Я",
+      "lastname": "Победил!"
     },
     {
       "firstname": "Gerasim",
@@ -24,6 +24,14 @@
       "firstname": "Bob",
       "lastname": "Smith",
       "id": 5
+    },
+    {
+      "id": "6",
+      "firstname": "Добавленный",
+      "lastname": "Чувак"
     }
-  ]
+  ],
+  "metadata": {
+    "lastId": 5
+  }
 }
