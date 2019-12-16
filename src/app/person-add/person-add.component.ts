@@ -1,5 +1,6 @@
 import {Component, OnInit, Output, EventEmitter, ViewChild, ElementRef} from '@angular/core';
 import {Person} from '../shared/models/person.model';
+import {ajaxGet} from "rxjs/internal-compatibility";
 
 
 @Component({
@@ -35,7 +36,10 @@ export class PersonAddComponent implements OnInit {
     } else {
       //Есть пустые поля. Ничего не делаем
     }
-    // console.log(this.lastnameInput);
+
+
+
+
   }
 
 }

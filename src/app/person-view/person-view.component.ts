@@ -12,6 +12,7 @@ export class PersonViewComponent implements OnInit {
   @Output('deletePerson') deleteButtonEventEmitter = new EventEmitter();
   @Input() inPerson: Person;
 
+  // displayedPersons = [];
 
   constructor() { }
 

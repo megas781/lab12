@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "firstname": "Gleb",
+      "lastname": "Kalachev",
+      "id": 1
+    },
+    {
+      "firstname": "Ivan",
+      "lastname": "Tazhibaev",
+      "id": 2
+    },
+    {
+      "firstname": "Milena",
+      "lastname": "Krasnova",
+      "id": 3
+    },
+    {
+      "firstname": "Gerasim",
+      "lastname": "Tuchev",
+      "id": 4
+    },
+    {
+      "firstname": "Bob",
+      "lastname": "Smith",
+      "id": 5
+    }
+  ]
+}

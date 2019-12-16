@@ -10,6 +10,7 @@ import { EditPersonModalComponent } from './edit-person-modal/edit-person-modal.
 import { PersonFilterPipe } from './person-filter.pipe';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import {FormsModule} from "@angular/forms";
+import {PersonService} from "./person.service";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import {FormsModule} from "@angular/forms";
 		BrowserModule,
 		FormsModule
 	],
-  providers: [],
+  providers: [PersonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
