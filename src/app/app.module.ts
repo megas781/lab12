@@ -12,6 +12,15 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import {FormsModule} from "@angular/forms";
 import {PersonService} from "./person.service";
 
+//routing
+import {Routes, RouterModule} from "@angular/router";
+import { AddUserComponent } from './add-user/add-user.component';
+
+// const appRoutes: Routes = [
+//   {path: '', component: AppComponent},
+//   {path: 'add-user', component: AddUserComponent}
+// ]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,11 +30,17 @@ import {PersonService} from "./person.service";
     PersonAddComponent,
     EditPersonModalComponent,
     PersonFilterPipe,
-    SearchBarComponent
+    SearchBarComponent,
+    AddUserComponent
   ],
 	imports: [
 		BrowserModule,
-		FormsModule
+		FormsModule,
+    RouterModule.forRoot([
+      {path: '1', component: FirstComponent},
+      {path: '2', component: SecondComponent},
+      {path: 'add-user', component: AddUserComponent}
+    ])
 	],
   providers: [PersonService],
   bootstrap: [AppComponent]
