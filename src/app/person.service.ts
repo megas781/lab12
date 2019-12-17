@@ -1,5 +1,5 @@
 import {Injectable, OnInit} from '@angular/core';
-import {ajaxGet, ajaxPost, ajaxPut} from "rxjs/internal-compatibility";
+import {ajaxDelete, ajaxGet, ajaxPost, ajaxPut} from "rxjs/internal-compatibility";
 import {Person} from "./shared/models/person.model";
 import {PersonFilterPipe} from "./person-filter.pipe";
 
@@ -48,12 +48,21 @@ export class PersonService {
   }
 
   createUser(newPerson: Person) {
+    console.log(`ajax createUser`);
     let self = this;
     let newPersonId = ++this.lastId;
-    newPerson.id = newPersonId
-    ajaxPost(`http://localhost:3000/users`, newPerson).subscribe(function () {
+    newPerson.id = newPersonId;
+    console.log(newPerson);
+
+    ajaxPost(`http://localhost:3000/users/`, newPerson, {
+      "Content-Type": "application/json"
+    }).subscribe(function () {
       self._storedPersons.push(newPerson);
     });
+    ajaxPut("http://localhost:3000/metadata/", {lastId: this.lastId}).subscribe(function () {
+      console.log(`success put??`);
+    });
+
   }
   putUpdatedUser(updatedPerson: Person) {
     console.log(`ajax put!`);
@@ -64,8 +73,13 @@ export class PersonService {
   }
   deleteUser(id: number) {
     console.log(`delete user with id ${id}`);
-    let index = this._storedPersons.findIndex((value, index, obj) => value.id === id);
-    this._storedPersons.splice(index, 1);
+
+    let self = this;
+    ajaxDelete(`http://localhost:3000/users/${id}`).subscribe(function () {
+      let index = self._storedPersons.findIndex((value, index, obj) => value.id === id);
+      self._storedPersons.splice(index, 1);
+    });
+
   }
 
 }

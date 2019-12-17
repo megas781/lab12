@@ -1,19 +1,9 @@
 {
   "users": [
     {
-      "firstname": "Gleb",
-      "lastname": "Kalachev",
-      "id": 1
-    },
-    {
       "firstname": "Ivan",
       "lastname": "Tazhibaev",
       "id": 2
-    },
-    {
-      "id": 3,
-      "firstname": "Я",
-      "lastname": "Победил!"
     },
     {
       "firstname": "Gerasim",
@@ -26,12 +16,22 @@
       "id": 5
     },
     {
-      "id": "6",
-      "firstname": "Добавленный",
-      "lastname": "Чувак"
+      "id": 7,
+      "firstname": "Глеб",
+      "lastname": "Калачев"
+    },
+    {
+      "id": 8,
+      "firstname": "Kos",
+      "lastname": "mas"
+    },
+    {
+      "id": 9,
+      "firstname": "Laka228",
+      "lastname": "Ferrum"
     }
   ],
   "metadata": {
-    "lastId": 5
+    "lastId": "9"
   }
 }
