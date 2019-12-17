@@ -1,5 +1,5 @@
 import {Component, OnInit, Output, EventEmitter, ViewChild, ElementRef} from '@angular/core';
-import {Person} from '../shared/models/person.model';
+import {Person} from '../../shared/models/person.model';
 import {ajaxGet} from "rxjs/internal-compatibility";
 
 

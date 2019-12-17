@@ -1,11 +1,6 @@
 {
   "users": [
     {
-      "firstname": "Ivan",
-      "lastname": "Tazhibaev",
-      "id": 2
-    },
-    {
       "firstname": "Gerasim",
       "lastname": "Tuchev",
       "id": 4
@@ -14,16 +9,6 @@
       "firstname": "Bob",
       "lastname": "Smith",
       "id": 5
-    },
-    {
-      "id": 7,
-      "firstname": "Глеб",
-      "lastname": "Калачев"
-    },
-    {
-      "id": 8,
-      "firstname": "Kos",
-      "lastname": "mas"
     },
     {
       "id": 9,
