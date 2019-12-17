@@ -22,9 +22,9 @@ export class PersonAddComponent implements OnInit {
   ngOnInit() {
   }
 
-  test(elm) {
-    console.log(elm)
-  }
+  // test(elm) {
+  //   console.log(elm)
+  // }
 
   onAddPerson(firstname: string, lastname: string) {
     if (firstname != '' && lastname != '') {
@@ -36,10 +36,6 @@ export class PersonAddComponent implements OnInit {
     } else {
       //Есть пустые поля. Ничего не делаем
     }
-
-
-
-
   }
 
 }

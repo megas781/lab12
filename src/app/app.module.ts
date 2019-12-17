@@ -15,7 +15,7 @@ import {RouterModule} from "@angular/router";
 import { AddUserComponent } from './pages-lab15/add-user/add-user.component';
 import { EditPersonComponent } from './pages-lab15/edit-person/edit-person.component';
 import { PersonListComponent } from './pages-lab15/person-list/person-list.component';
-import {NotFoundComponent} from "./not-found/not-found.component";
+import {NotFoundComponent} from "./pages-lab15/not-found/not-found.component";
 
 @NgModule({
   declarations: [
