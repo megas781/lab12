@@ -1,4 +1,12 @@
-
+.person-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*margin-top: 40px;*/
+}
+.cell {
+  padding: 16px;
+}
 .button:hover {
   font-weight: bold;
   /*transform: scale(1.1);*/

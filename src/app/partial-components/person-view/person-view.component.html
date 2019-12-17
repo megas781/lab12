@@ -1,14 +1,11 @@
-<div class="container">
-  <div class="row">
-    <div class="col-3">{{inPerson.id}}</div>
-    <div class="col-3">{{inPerson.firstname}}</div>
-    <div class="col-3">{{inPerson.lastname}}</div>
-    <div class="col-1"></div>
-    <div class="col-1 button edit-button"
-    (click)="editPersonEventEmitter.emit(inPerson)"
-    >Изменить</div>
-    <div class="col-1 button delete-button"
-         (click)="deleteButtonEventEmitter.emit(inPerson)">Удалить
-    </div>
+<div class="container person-view">
+  <div class="cell">{{inPerson.id}}</div>
+  <div class="cell">{{inPerson.firstname}} {{inPerson.lastname}}</div>
+
+  <div>
+    <div class=" button edit-button"
+         (click)="editPersonEventEmitter.emit(inPerson)">Изменить</div>
+    <div class=" button delete-button"
+         (click)="deleteButtonEventEmitter.emit(inPerson)">Удалить</div>
   </div>
 </div>
