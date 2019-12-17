@@ -2,10 +2,10 @@
   <div class="cell">{{inPerson.id}}</div>
   <div class="cell">{{inPerson.firstname}} {{inPerson.lastname}}</div>
 
-  <div>
-    <div class=" button edit-button"
-         (click)="editPersonEventEmitter.emit(inPerson)">Изменить</div>
-    <div class=" button delete-button"
-         (click)="deleteButtonEventEmitter.emit(inPerson)">Удалить</div>
+  <div class="row">
+    <button class="btn btn-success col-6"
+         (click)="editPersonEventEmitter.emit(inPerson)">Изменить</button>
+    <button class="btn btn-danger col-6"
+         (click)="deleteButtonEventEmitter.emit(inPerson)">Удалить</button>
   </div>
 </div>

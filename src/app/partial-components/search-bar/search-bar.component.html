@@ -1,11 +1,19 @@
-<div class="row container">
-  <div class="col-1">Поиск:</div>
+<!--<div class="row container">-->
+<!--  <div class="col-1">Поиск:</div>-->
+<!--  <input-->
+<!--    type="text"-->
+<!--    placeholder="Введите имя, фамилию..."-->
+<!--    class="col-10"-->
+<!--    [(ngModel)]="searchString"-->
+<!--    (input)="typeEventEmitter.emit(this.searchString)"-->
+<!--    >-->
+<!--&lt;!&ndash;  <div class="col-1 button" (click)="searchEventEmitter.emit(this.searchString)">Найти</div>&ndash;&gt;-->
+<!--</div>-->
+
+<form class="form-inline mt-2 mt-md-0 container">
   <input
-    type="text"
-    placeholder="Введите имя, фамилию..."
-    class="col-10"
+    class="form-control col-10" type="text" placeholder="Search" aria-label="Search"
     [(ngModel)]="searchString"
-    (input)="typeEventEmitter.emit(this.searchString)"
-    >
-<!--  <div class="col-1 button" (click)="searchEventEmitter.emit(this.searchString)">Найти</div>-->
-</div>
+    (input)="typeEventEmitter.emit(this.searchString)">
+  <button class="btn btn-outline-success col-2 my-2 my-sm-0" type="submit">Search</button>
+</form>
