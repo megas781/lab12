@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <input type="text" class="form-control" placeholder="Имя" #inputFirstname [(ngModel)]="this.editedPerson.firstname">
+    </div>
+    <div class="col-12 mt-2">
+      <input type="text" class="form-control" placeholder="Фамилия" #inputLastname [(ngModel)]="this.editedPerson.lastname">
+    </div>
+    <div class="col-12 mt-2">
+      <button class="btn btn-primary"
+              (click)="onSavePerson(inputFirstname.value, inputLastname.value)">
+        Сохранить изменения</button>
+    </div>
+  </div>
+</div>

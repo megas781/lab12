@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, EventEmitter, Output} from '@angular/core';
-import {Person} from "../shared/models/person.model";
+import {Person} from "../../shared/models/person.model";
 
 @Component({
   selector: 'app-edit-person-modal',

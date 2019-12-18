@@ -1,7 +1,7 @@
 import {Component, OnInit, OnDestroy, ViewChild, ElementRef, AfterViewInit, Inject} from '@angular/core';
 import { Person } from './shared/models/person.model';
-import {EditPersonModalComponent} from "./edit-person-modal/edit-person-modal.component";
-import {SearchBarComponent} from "./partial-components/search-bar/search-bar.component";
+import {EditPersonModalComponent} from "./ui-elements/edit-person-modal/edit-person-modal.component";
+import {SearchBarComponent} from "./person-list-page/search-bar/search-bar.component";
 import {PersonFilterPipe} from "./person-filter.pipe";
 import {PersonService} from "./person.service";
 

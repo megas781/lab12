@@ -1,7 +1,7 @@
 import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
-import {Person} from "../../shared/models/person.model";
+import {Person} from "../shared/models/person.model";
 import {ActivatedRoute, Router} from "@angular/router";
-import {PersonService} from "../../person.service";
+import {PersonService} from "../person.service";
 
 @Component({
   selector: 'app-add-user',

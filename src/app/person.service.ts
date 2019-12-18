@@ -37,6 +37,12 @@ export class PersonService {
     });
   }
 
+  getUserWithId(id) {
+    return this._storedPersons.find(function (person, index, array) {
+      return person.id == id;
+    });
+  }
+
   getUsers() {
     let self = this;
     ajaxGet("http://localhost:3000/users").subscribe(function (ajaxResponse) {
