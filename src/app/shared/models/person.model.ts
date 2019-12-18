@@ -8,6 +8,6 @@ export class Person {
         this.lastname = lastname;
     }
     getFullnameString(): string {
-      return this.firstname + '' + this.lastname;
+      return this.firstname + ' ' + this.lastname;
     }
 }

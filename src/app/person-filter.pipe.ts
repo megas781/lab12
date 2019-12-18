@@ -7,6 +7,7 @@ import {Person} from "./shared/models/person.model";
 export class PersonFilterPipe implements PipeTransform {
 
   transform(array: Person[], filter: string): Person[] {
+    filter = filter.trim();
     if (filter === '') {
       return array;
     } else {

@@ -30,7 +30,7 @@ export class PersonListComponent implements OnInit {
     this.personService.deleteUser(personToDelete.id);
   }
   onType(searchString) {
-    this.personService.searchString = searchString;
+    // this.personService.searchString = searchString;
     // console.log(this.personService.displayedPersons);
   }
 }

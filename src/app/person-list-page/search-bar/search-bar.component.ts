@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {PersonService} from "../../person.service";
 
 @Component({
   selector: 'app-search-bar',
@@ -11,7 +12,7 @@ export class SearchBarComponent implements OnInit {
   @Output() searchEventEmitter = new EventEmitter();
   public searchString: string = '';
 
-  constructor() { }
+  constructor(private personService: PersonService) { }
   ngOnInit() {
   }
 }
