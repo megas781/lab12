@@ -13,8 +13,9 @@
 <form class="form-inline mt-2 mt-md-0 container">
   <input
     class="form-control col-10" type="text" placeholder="Search" aria-label="Search"
-    [(ngModel)]="personService.searchString"
+    [(ngModel)]="this.searchString"
     [ngModelOptions]="{standalone: true}"
+    (ngModelChange)="searchEventEmitter.emit(this.searchString)"
   >
-  <button class="btn btn-outline-success col-2 my-2 my-sm-0" type="submit" (click)="searchEventEmitter.emit()">Search</button>
+  <button class="btn btn-outline-success col-2 my-2 my-sm-0" type="submit">Search</button>
 </form>

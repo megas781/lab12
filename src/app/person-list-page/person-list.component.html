@@ -1,12 +1,12 @@
 <app-search-bar
-  (typeEventEmitter)="onType($event)"
+  (searchEventEmitter)="searchAsdf($event)"
 ></app-search-bar>
 
 
 <div class="person-list">
 <app-person-view
   [inPerson]="person"
-  *ngFor="let person of this.personService.displayedPersons"
+  *ngFor="let person of this.personService._storedPersons | personFilter : asdfasdf"
   (deletePerson)="onDeletePerson($event)"
   (editPerson)="onEditPerson($event)"
   ></app-person-view>

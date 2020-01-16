@@ -14,7 +14,12 @@ export class PersonListComponent implements OnInit {
   @ViewChild(SearchBarComponent, {static: false}) searchBar: SearchBarComponent;
 
 
-  asdfasdf: String = '';
+  public asdfasdf: String = '';
+  searchAsdf($asdf) {
+    console.log('$asdf: ' + $asdf);
+    this.asdfasdf = $asdf
+  }
+
   constructor(
     public personService: PersonService,
     private router: Router
