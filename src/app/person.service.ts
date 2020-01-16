@@ -25,7 +25,7 @@ export class PersonService {
 
   public searchString = '';
 
-  private _storedPersons: Person[] = [];
+  public _storedPersons: Person[] = [];
 
   constructor() {
     console.log('берем?');

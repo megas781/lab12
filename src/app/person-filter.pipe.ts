@@ -11,9 +11,13 @@ export class PersonFilterPipe implements PipeTransform {
     if (filter === '') {
       return array;
     } else {
-      return array.filter(function (value, index, array) {
-        return value.getFullnameString().toLowerCase().includes(filter.toLowerCase());
-      });
+      if (array) {
+        return array.filter(function (value, index, array) {
+          return value.getFullnameString().toLowerCase().includes(filter.toLowerCase());
+        });
+      } else {
+        return [];
+      }
     }
   }
 

@@ -13,6 +13,8 @@ export class PersonListComponent implements OnInit {
 
   @ViewChild(SearchBarComponent, {static: false}) searchBar: SearchBarComponent;
 
+
+  asdfasdf: String = '';
   constructor(
     public personService: PersonService,
     private router: Router
